@@ -15,6 +15,7 @@ OBJECTS = $(filter-out Runvoxelizer.o, $(SOURCES:.cc=.o))
 # include options for this package
 INCFLAGS = -I.
 INCFLAGS += -I$(GATE_DIR)
+INCFLAGS += -I$(PAOLINA_BASEDIR)/include/
 
 # platform-specific options
 OSNAME          = $(shell uname -s)
@@ -37,6 +38,7 @@ include $(GATEMAKEDIR)/GNUmakefile.GATE
 
 LIBS += $(shell root-config --libs)  -lCore -lRIO -lHist
 LIBS += -L$(GATE_DIR)/lib/  -lGATE -lGATEIO -lGATEUtils -lGateModule
+LIBS += -L$(PAOLINA_BASEDIR)/lib/  -lpaolina
 
 bin: lib/$(SHLIB) Runvoxelizer.o
 	@echo "<< compiling Runvoxelizer >>"
