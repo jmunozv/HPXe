@@ -1,0 +1,65 @@
+
+############################ INPUT DATA ################################
+#--------- INPUT DATA FORMAT -------#
+CNTJob READER S ireneReader
+
+#--------- INPUT DATA FILES -------#
+CNTJob INPUT_DATA SV 1
+/Users/Javi/Development/alex3/data/Next100.Xe136_bb0nu.ACTIVE.0.next
+
+
+
+############################ OUTPUT DATA ################################
+#------ SAVE EVENTS IN OUTPUT FILE ----------# 
+CNTJob SAVE I 0
+
+#--------- DATA WRITER -------#
+CNTJob WRITER S ireneWriter
+
+#--------- OUTPUT DATA -------#
+CNTJob OUTPUT_DATA SV 1
+/Users/Javi/Development/Next100_2K15/data/Next100.Xe136_bb0nu.ACTIVE.root
+
+
+
+############################ EVENTS TO ANALYZE ##########################
+#---------- NUMBER OF EVENTS TO ANALYZE ----------#
+CNTJob NEVENTS I 1000
+
+#---------- FIRST EVENS TO ANALYZE ----------#
+CNTJob FEVENT I 0
+
+
+
+############################ VERBOSITY LEVEL ##########################
+#---------- VERBOSITY LEVEL ----------#
+CNTJob LEVEL I 1
+
+
+
+############################ AUXILIARY FILES ##############################
+#------------- LOG FILE -------------#
+CNTJob LOG I 1
+CNTJob FLOG S /Users/Javi/Development/Next100_2K15/data/Next100.Xe136_bb0nu.ACTIVE.log
+
+#---------- HISTOGRAMS FILE ----------#
+CNTJob HISTOS I 1
+CNTJob FHISTOS S /Users/Javi/Development/Next100_2K15/data/Next100.Xe136_bb0nu.ACTIVE.histos.root
+
+
+
+############################ ALGORITHMS ################################
+#--------- PATHS with modules to be used -------#
+CNTJob PATHS SV 1
+/Users/Javi/Development/HPXe/preproc/algos/
+
+#--------- ALGORITHMS-------#
+CNTJob ALGOS SV 2
+MCCharacterizer
+IGConverter
+
+#---------- Algorithm parameters ----------#
+MCCharacterizer LEVEL I 1
+
+IGConverter GATE_DST_NAME S /Users/Javi/Development/Next100_2K15/data/Next100.Xe136_bb0nu.ACTIVE.root
+IGConverter LEVEL I 1
