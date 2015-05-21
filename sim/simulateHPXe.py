@@ -13,7 +13,7 @@ numEvents = sys.argv[3]
 EXP_NAME = 'HPXe'
 MIN_EDEP = 0.0
 
-EXE_PATH   = os.environ['SW_PATH'] + '/nexus_v4_04_03/'
+EXE_PATH   = os.environ['SW_PATH'] + '/nexus_v4_04_04/'
 ODST_PATH  = '/data4/NEXT/HPXe/sim/'
 DECAY0_PATH = '/data4/NEXT/NEXTNEW/decay0/'
 
