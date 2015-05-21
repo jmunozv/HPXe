@@ -47,11 +47,11 @@ def make_init_file():
 /Actions/RegisterTrackingAction DEFAULT
 
 ### PHYSICS
-/PhysicsList/RegisterPhysics G4EmLivermorePhysics
+/PhysicsList/RegisterPhysics G4EmStandardPhysics_option4
 /PhysicsList/RegisterPhysics NexusPhysics
 /PhysicsList/RegisterPhysics G4DecayPhysics
 /PhysicsList/RegisterPhysics G4RadioactiveDecayPhysics
-/PhysicsList/RegisterPhysics NexusStepLimiterBuilder
+/PhysicsList/RegisterPhysics G4StepLimiterPhysics
 #/PhysicsList/RegisterPhysics G4OpticalPhysics
 
 ### EXTRA CONFIGURATION
